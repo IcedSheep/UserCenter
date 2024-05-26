@@ -34,5 +34,8 @@
     <select id="selectByUserAccount" resultType="java.lang.Long">
         select count(*) from user where userAccount = #{userAccount}
     </select>
+    <select id="selectUserByAccountAndPsw" resultType="com.sheep.domain.User">
+        select * from user where userAccount = #{userAccount} and userPassword = #{userPassword}
+    </select>
 
 </mapper>
