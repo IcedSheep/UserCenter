@@ -32,10 +32,10 @@
         insert into user (useraccount,userPassword) values (#{userAccount},#{userPassword})
     </insert>
     <select id="selectByUserAccount" resultType="java.lang.Long">
-        select count(*) from user where userAccount = #{userAccount}
+        select count(*) from user where userAccount = #{userAccount} and deleted = 0
     </select>
     <select id="selectUserByAccountAndPsw" resultType="com.sheep.domain.User">
-        select * from user where userAccount = #{userAccount} and userPassword = #{userPassword}
+        select * from user where userAccount = #{userAccount} and userPassword = #{userPassword} and deleted = 0
     </select>
 
 </mapper>
