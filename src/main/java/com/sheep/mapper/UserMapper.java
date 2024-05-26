@@ -23,6 +23,13 @@ public interface UserMapper extends BaseMapper<User> {
      * @return
      */
     Long insertUserInfo(User user);
+
+    /**
+     * 根据账号和密码查询用户
+     * @param user
+     * @return
+     */
+    User selectUserByAccountAndPsw(User user);
 }
 
 
